@@ -203,6 +203,14 @@
       }
     }
   });
+  window.showNotification = function() {
+  document.getElementById("myNotification").style.display = "block";
+}
+
+window.closeNotification = function() {
+  document.getElementById("myNotification").style.display = "none";
+}
+
 
   /**
    * Navmenu Scrollspy
@@ -225,5 +233,8 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+  window.addEventListener('load', () => {
+  showNotification();
+});
 
 })();

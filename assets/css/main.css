@@ -1321,3 +1321,25 @@ section,
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }
+#myNotification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fffcfc;
+  color: rgb(0, 0, 0);
+  padding: 50px 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  font-size: 26px;   /* 🔹 increase or adjust as you prefer */
+  line-height: 1.6;  /* 🔹 improves readability */
+}
+#myNotification button {
+  background: #000000;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 0px;
+}
