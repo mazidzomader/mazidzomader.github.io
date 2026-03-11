@@ -215,6 +215,15 @@
         </div>
 
         <div class="certs-grid reveal" aria-label="Certifications list">
+          <a class="cert-card" href="https://www.grameenphone.academy/cert/a12ae2732411" target="_blank"
+            rel="noreferrer">
+            <div class="cert-info">
+              <h3 class="cert-title">UX Design Decision-making with AI</h3>
+              <p class="cert-issuer small">Grameenphone Ltd • <span class="muted">March 2026</span></p>
+            </div>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+
           <a class="cert-card" href="https://www.kaggle.com/learn/certification/mazidzomader/python" target="_blank"
             rel="noreferrer">
             <div class="cert-info">
@@ -257,7 +266,23 @@
         <!-- NEW: Research Pillars -->
         <div class="research-pillars reveal" aria-label="Active research areas">
           <div class="pillar-card">
-            <div class="pillar-ic"><i class="fa-regular fa-newspaper"></i></div>
+            <div class="pillar-ic"><i class="fa-solid fa-gears"></i></div>
+            <div class="pillar-body">
+              <h3 class="pillar-title">Machine Learning</h3>
+              <p class="muted small">Exploring supervised and unsupervised learning, feature engineering, and predictive
+                modeling.</p>
+            </div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-ic"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="pillar-body">
+              <h3 class="pillar-title">Neural Networks</h3>
+              <p class="muted small">Studying deep learning architectures, optimization functions, and neural
+                representational learning.</p>
+            </div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-ic"><i class="fa-solid fa-people-arrows"></i></div>
             <div class="pillar-body">
               <h3 class="pillar-title">Natural Language Processing</h3>
               <p class="muted small">Exploring transformer architectures, tokenization, and language modeling
@@ -276,7 +301,7 @@
             <div class="pillar-ic"><i class="fa-solid fa-eye"></i></div>
             <div class="pillar-body">
               <h3 class="pillar-title">Multimodal & Vision</h3>
-              <h4 class="pillar-subtitle small">Vision-Language Models</h4>
+              <!-- <h4 class="pillar-subtitle small">Vision-Language Models</h4> -->
               <p class="muted small">Studying the intersection of visual perception and language understanding in VLMs.
               </p>
             </div>
@@ -301,6 +326,15 @@
       <div class="container">
         <div class="section-head reveal">
           <h2>Projects</h2>
+        </div>
+
+        <div class="research-toolbar reveal" aria-label="Project filters">
+          <div class="filter-group" id="projectFilters" role="group" aria-label="Filter projects"></div>
+          <div class="search-wrap">
+            <label class="sr-only" for="projectSearch">Search projects</label>
+            <input class="input" id="projectSearch" type="search" placeholder="Search by title, category, stack…"
+              autocomplete="off" />
+          </div>
         </div>
 
         <div class="grid" id="projectsGrid" aria-label="Project cards"></div>

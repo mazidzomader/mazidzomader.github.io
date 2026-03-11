@@ -129,6 +129,7 @@ const PROJECTS = [
       "Minimalist single-page portfolio with accessibility-first components, data-driven research section, and a screenshot showcase modal.",
     stack: ["HTML", "CSS", "JavaScript", "PHP"],
     links: { code: "https://github.com/mazidzomader/CSE370-Project-CareerHigh" },
+    categories: ["Database"],
     featured: true,
     images: [
       { src: "assets/img/Project1/Homepage.png", alt: "Portfolio — hero section", caption: "Homepage" },
@@ -150,6 +151,7 @@ const PROJECTS = [
       "This project designs and implements a secure, scalable campus network for BRAC University using Cisco Packet Tracer, integrating VLSM, routing, and centralized enterprise services.",
     stack: ["Cisco Packet Tracker"],
     links: { code: "https://github.com/mazidzomader/CSE421-Project-BRACU_Campus_Network_Design" },
+    categories: ["Computer Networks"],
     featured: false,
     images: [
       { src: "assets/img/Project2/421_Project_Diagram.png", alt: "Protocol Diagram", caption: "Protocol Diagram" },
@@ -162,6 +164,7 @@ const PROJECTS = [
       "This project analyzes and classifies apartment price ranges using machine learning techniques to predict housing categories based on key features.",
     stack: ["Python", "Numpy", "Pandas", "Scikit-Learn", "Seaborn"],
     links: { code: "https://github.com/mazidzomader/CSE422-Project-Flat_Price_Prediction" },
+    categories: ["AI", "Machine Learning", "Neural Network"],
     featured: true,
     images: [{ src: "assets/img/Project3/422.png", alt: "ProjectSummary", caption: "Model Scores" },
     { src: "assets/img/Project3/confusion_matrix.png", alt: "Confusion", caption: "Confusion" },
@@ -171,16 +174,6 @@ const PROJECTS = [
     { src: "assets/img/Project3/AUC.png", alt: "AUC", caption: "AUC" },
     ],
   },
-  // {
-  //   id: "proj-notes",
-  //   title: "Research Notes Hub",
-  //   description:
-  //     "A clean system for paper notes: highlights, summaries, tags, and quick search — optimized for reading workflows.",
-  //   stack: ["HTML", "CSS", "JavaScript"],
-  //   links: { live: "#", code: "#" },
-  //   featured: false,
-  //   images: [{ src: "assets/img/project-3-1.jpg", alt: "Notes hub — dashboard", caption: "Dashboard and tag filters" }],
-  // },
 ];
 
 /* ----------------------------
@@ -538,43 +531,95 @@ function setupResearch() {
    Projects + Gallery (same behavior)
 ---------------------------- */
 
-function renderProjects() {
+const PROJECT_CATEGORIES = ["All", "Database", "Machine Learning", "Neural Network", "NLP", "Computer Networks", "Computer Graphics"]; // demo
+
+function renderProjectFilters(activeCategory) {
+  const root = $("#projectFilters");
+  if (!root) return;
+
+  root.innerHTML = PROJECT_CATEGORIES.map((cat) => {
+    const pressed = cat === activeCategory ? "true" : "false";
+    return `<button class="filter" type="button" aria-pressed="${pressed}" data-filter="${escapeHtml(cat)}">${escapeHtml(cat)}</button>`;
+  }).join("");
+}
+
+function projectMatches(p, { category, query }) {
+  const categoryOk = category === "All" ? true : (p.categories || []).includes(category);
+  const q = String(query || "").trim().toLowerCase();
+  if (!q) return categoryOk;
+
+  const hay = [
+    p.title, p.description, ...(p.categories || []),
+    ...(p.stack || [])
+  ].join(" ").toLowerCase();
+
+  return categoryOk && hay.includes(q);
+}
+
+function renderProjectList(activeCategory, query) {
   const root = $("#projectsGrid");
   if (!root) return;
 
-  const items = PROJECTS.slice().sort((a, b) => (Boolean(b.featured) === Boolean(a.featured) ? 0 : b.featured ? 1 : -1));
+  const filtered = PROJECTS
+    .filter((p) => projectMatches(p, { category: activeCategory, query }))
+    .sort((a, b) => (Boolean(b.featured) === Boolean(a.featured) ? 0 : b.featured ? 1 : -1));
 
-  root.innerHTML = items.map((p) => {
-    const shots = Array.isArray(p.images) ? p.images : [];
-    const cover = shots[0]?.src ? `<img src="${escapeHtml(shots[0].src)}" alt="${escapeHtml(shots[0].alt || "")}" loading="lazy" />` : "";
-    const badge = p.featured ? `<span class="project-badge">Featured</span>` : "";
+  root.innerHTML = filtered.length
+    ? filtered.map((p) => {
+      const shots = Array.isArray(p.images) ? p.images : [];
+      const cover = shots[0]?.src ? `<img src="${escapeHtml(shots[0].src)}" alt="${escapeHtml(shots[0].alt || "")}" loading="lazy" />` : "";
+      const badge = p.featured ? `<span class="project-badge">Featured</span>` : "";
 
-    return `
-      <article class="project reveal" data-project="${escapeHtml(p.id)}">
-        <div class="project-media" aria-label="Project preview">
-          ${cover}
-          ${badge}
-        </div>
+      return `
+          <article class="project reveal" data-project="${escapeHtml(p.id)}">
+            <div class="project-media" aria-label="Project preview">
+              ${cover}
+              ${badge}
+            </div>
 
-        <div>
-          <h3 class="project-title">${escapeHtml(p.title)}</h3>
-          <p class="project-desc">${escapeHtml(p.description)}</p>
-        </div>
+            <div>
+              <h3 class="project-title">${escapeHtml(p.title)}</h3>
+              <p class="project-desc">${escapeHtml(p.description)}</p>
+            </div>
 
-        <div class="project-stack" aria-label="Tech stack">
-          ${(p.stack || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
-        </div>
+            <div class="project-stack" aria-label="Tech stack">
+              ${(p.stack || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
+            </div>
 
-        <div class="project-links" aria-label="Project links">
-          ${p.links?.live ? `<a class="btn btn-sm btn-primary" href="${escapeHtml(p.links.live)}" target="_blank" rel="noreferrer">Live</a>` : ""}
-          ${p.links?.code ? `<a class="btn btn-sm" href="${escapeHtml(p.links.code)}" target="_blank" rel="noreferrer">Code</a>` : ""}
-          <button class="btn btn-sm" type="button" data-open-gallery="${escapeHtml(p.id)}">
-            View screenshots (${shots.length || 0})
-          </button>
-        </div>
-      </article>
-    `;
-  }).join("");
+            <div class="project-links" aria-label="Project links">
+              ${p.links?.live ? `<a class="btn btn-sm btn-primary" href="${escapeHtml(p.links.live)}" target="_blank" rel="noreferrer">Live</a>` : ""}
+              ${p.links?.code ? `<a class="btn btn-sm" href="${escapeHtml(p.links.code)}" target="_blank" rel="noreferrer">Code</a>` : ""}
+              <button class="btn btn-sm" type="button" data-open-gallery="${escapeHtml(p.id)}">
+                View screenshots (${shots.length || 0})
+              </button>
+            </div>
+          </article>
+        `;
+    }).join("")
+    : `<div class="project"><p class="muted" style="margin:0;">No projects match your filter. Try a different category or search term.</p></div>`;
+}
+
+function setupProjects() {
+  let activeCategory = "All";
+  let query = "";
+
+  renderProjectFilters(activeCategory);
+  renderProjectList(activeCategory, query);
+
+  $("#projectFilters")?.addEventListener("click", (e) => {
+    const btn = e.target instanceof Element ? e.target.closest("[data-filter]") : null;
+    if (!btn) return;
+    activeCategory = btn.getAttribute("data-filter") || "All";
+    renderProjectFilters(activeCategory);
+    renderProjectList(activeCategory, query);
+    setupReveal();
+  });
+
+  $("#projectSearch")?.addEventListener("input", (e) => {
+    query = e.target.value || "";
+    renderProjectList(activeCategory, query);
+    setupReveal();
+  });
 }
 
 function setupGallery() {
@@ -804,7 +849,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderSkills();
   setupResearch();
-  renderProjects();
+  setupProjects();
 
   setupGallery();
   setupContactForm();
