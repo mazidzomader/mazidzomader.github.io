@@ -531,7 +531,7 @@ function setupResearch() {
    Projects + Gallery (same behavior)
 ---------------------------- */
 
-const PROJECT_CATEGORIES = ["All", "Database", "Machine Learning", "Neural Network", "NLP", "Computer Networks", "Computer Graphics"]; // demo
+const PROJECT_CATEGORIES = ["All", "Database", "Machine Learning", "Neural Network", "Natural Language Processing", "Computer Networks", "Computer Graphics"]; // demo
 
 function renderProjectFilters(activeCategory) {
   const root = $("#projectFilters");
