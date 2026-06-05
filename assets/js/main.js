@@ -5,7 +5,7 @@
 ---------------------------- */
 
 const SITE = {
-  name: "Your Name",
+  name: "Abdullah Al Mazid Zomader",
 };
 
 // Theme Switching Logic
@@ -62,69 +62,34 @@ const SKILLS = [
 ];
 
 const RESEARCH = [
-  //   {
-  //     id: "paper-a11y",
-  //     title: "Efficient UI Prototyping for Accessibility Audits (Placeholder)",
-  //     authors: ["Your Name", "Coauthor Name"],
-  //     year: 2025,
-  //     venue: "Workshop (placeholder)",
-  //     status: "Preprint",
-  //     summary:
-  //       "A lightweight workflow for building accessible prototypes and automatically flagging common interaction issues during iteration.",
-  //     tags: ["HCI", "Accessibility", "Tooling"],
-  //     featured: true,
-  //     links: { pdf: "#", arxiv: "#", code: "#", project: "#" },
-  //     bibtex: `@article{yourname2025a11y,
-  //   title={Efficient UI Prototyping for Accessibility Audits},
-  //   author={Your Name and Coauthor Name},
-  //   journal={arXiv preprint arXiv:XXXX.XXXXX},
-  //   year={2025}
-  // }`,
-  //   },
-  //   {
-  //     id: "paper-perf",
-  //     title: "Benchmarking Frontend Performance Budgets on Low-End Devices (Placeholder)",
-  //     authors: ["Your Name"],
-  //     year: 2024,
-  //     venue: "Under review (placeholder)",
-  //     status: "Under review",
-  //     summary:
-  //       "Measures how bundle size, rendering patterns, and animation strategies affect real-world performance and perceived smoothness on constrained hardware.",
-  //     tags: ["Systems", "Web Performance", "Measurement"],
-  //     featured: false,
-  //     links: { pdf: "#", code: "#" },
-  //     bibtex: `@inproceedings{yourname2024perf,
-  //   title={Benchmarking Frontend Performance Budgets on Low-End Devices},
-  //   author={Your Name},
-  //   booktitle={Conference/Workshop (under review)},
-  //   year={2024}
-  // }`,
-  //   },
-  //   {
-  //     id: "paper-micro",
-  //     title: "A Reproducible Study of UI Micro-Interactions and User Trust (Placeholder)",
-  //     authors: ["Your Name", "Coauthor Name", "Coauthor Name"],
-  //     year: 2024,
-  //     venue: "In progress",
-  //     status: "In progress",
-  //     summary:
-  //       "Investigates whether subtle motion and feedback patterns change user confidence, with open materials and replication-friendly methodology.",
-  //     tags: ["HCI", "UX", "Reproducibility"],
-  //     featured: false,
-  //     links: { project: "#" },
-  //     bibtex: `@misc{yourname2024micro,
-  //   title={A Reproducible Study of UI Micro-Interactions and User Trust},
-  //   author={Your Name and Coauthor Name and Coauthor Name},
-  //   note={In progress},
-  //   year={2024}
-  // }`,
-  //   },
+  {
+    id: "paper-carbon-med",
+    title: "CARBON-MED: Comparative Analysis of Resource-efficient Benchmarking and Optimization of Neural and Machine learning models under Emission constraints for Diagnostical datasets",
+    authors: ["Abdullah Al Mazid Zomader", "Avisheek Pal Joy", "MD Nur Uddin Howlader Ashiq"],
+    year: 2026,
+    venue: "CSE427: Machine Learning",
+    status: "Coursework",
+    summary: "A comparative study benchmarking six machine learning and neural network models (AdaBoost, XGBoost, Random Forest, KNN, Logistic Regression, MLP) across six diagnostic datasets (Breast Cancer, Heart Disease, Hepatitis C, Thyroid, Diabetes, Asthma) to optimize accuracy and carbon emissions utilizing CodeCarbon.",
+    tags: ["coursework"],
+    featured: false,
+    links: {
+      code: "https://github.com/mazidzomader/CSE427-Project-BRACU",
+      pdf: "https://drive.google.com/file/d/1L1hhtKRZwpsVM-T7WIkDwIAUcZvxw2aF/view?usp=sharing"
+    },
+    bibtex: `@article{zomader2026carbonmed,
+  title={CARBON-MED: Comparative Analysis of Resource-efficient Benchmarking and Optimization of Neural and Machine learning models under Emission constraints for Diagnostical datasets},
+  author={Zomader, Abdullah Al Mazid and Joy, Avisheek Pal and Ashiq, MD Nur Uddin Howlader},
+  journal={CSE427 Coursework},
+  year={2026}
+}`
+  }
 ];
 
 const PROJECTS = [
   {
     id: "proj-database",
     title: "CarrerHigh",
+    course: "CSE370: Database Management",
     description:
       "Minimalist single-page portfolio with accessibility-first components, data-driven research section, and a screenshot showcase modal.",
     stack: ["HTML", "CSS", "JavaScript", "PHP"],
@@ -147,6 +112,7 @@ const PROJECTS = [
   {
     id: "proj-networks",
     title: "BRACU Campus Network Design",
+    course: "CSE421: Computer Networks",
     description:
       "This project designs and implements a secure, scalable campus network for BRAC University using Cisco Packet Tracer, integrating VLSM, routing, and centralized enterprise services.",
     stack: ["Cisco Packet Tracker"],
@@ -160,18 +126,37 @@ const PROJECTS = [
   {
     id: "proj-ML",
     title: "Flat Pricing Analysis",
+    course: "CSE422: Artificial Intelligence",
     description:
       "This project analyzes and classifies apartment price ranges using machine learning techniques to predict housing categories based on key features.",
     stack: ["Python", "Numpy", "Pandas", "Scikit-Learn", "Seaborn"],
     links: { code: "https://github.com/mazidzomader/CSE422-Project-Flat_Price_Prediction" },
     categories: ["AI", "Machine Learning", "Neural Network"],
-    featured: true,
+    featured: false,
     images: [{ src: "assets/img/Project3/422.png", alt: "ProjectSummary", caption: "Model Scores" },
     { src: "assets/img/Project3/confusion_matrix.png", alt: "Confusion", caption: "Confusion" },
     { src: "assets/img/Project3/Accuracy.png", alt: "Accuracy", caption: "Accuracy" },
     { src: "assets/img/Project3/Precision.png", alt: "Precision", caption: "Precision" },
     { src: "assets/img/Project3/Recall.png", alt: "Recall", caption: "Recall" },
     { src: "assets/img/Project3/AUC.png", alt: "AUC", caption: "AUC" },
+    ],
+  },
+  {
+    id: "proj-nlp",
+    title: "Multi-Class Text Classification",
+    course: "CSE440: Natural Language Processing",
+    description:
+      "A comprehensive study on multi-class text classification using 107k+ news headlines. Explores the impact of various preprocessing pipelines, word embeddings, and neural architectures on accuracy.",
+    stack: ["Python", "TensorFlow", "Keras", "Scikit-Learn", "NLTK", "Word2Vec"],
+    links: { code: "https://github.com/mazidzomader/CSE440-PROJECT-BRACU" },
+    categories: ["Machine Learning", "Neural Network", "Natural Language Processing"],
+    featured: true,
+    images: [
+      { src: "assets/img/Project4/Results.png", alt: "Model Comparison Results Table", caption: "Model Comparison Results" },
+      { src: "assets/img/Project4/Wordcloud.png", alt: "Word Cloud of Frequent Terms", caption: "Frequent Terms Word Cloud" },
+      { src: "assets/img/Project4/barplot.png", alt: "Class Distribution Bar Plot", caption: "Class Distribution" },
+      { src: "assets/img/Project4/Best_CM.png", alt: "Confusion Matrix of the Best Performing Model", caption: "Best Model Confusion Matrix" },
+      { src: "assets/img/Project4/Worst_CM.png", alt: "Confusion Matrix of the Worst Performing Model", caption: "Worst Model Confusion Matrix" },
     ],
   },
 ];
@@ -373,30 +358,40 @@ function renderSkills() {
    Research
 ---------------------------- */
 
-const RESEARCH_STATUSES = ["All", "Published", "Under review", "Preprint", "In progress"];
+function getResearchTags() {
+  const tagsSet = new Set();
+  RESEARCH.forEach(p => {
+    if (p.tags) {
+      p.tags.forEach(t => tagsSet.add(t));
+    }
+  });
+  return ["All", ...Array.from(tagsSet)];
+}
+
 const normalizeStatus = (s) => (String(s || "").trim() || "In progress");
 
-function renderResearchFilters(activeStatus) {
+function renderResearchFilters(activeTag) {
   const root = $("#researchFilters");
   if (!root) return;
 
-  root.innerHTML = RESEARCH_STATUSES.map((s) => {
-    const pressed = s === activeStatus ? "true" : "false";
-    return `<button class="filter" type="button" aria-pressed="${pressed}" data-filter="${escapeHtml(s)}">${escapeHtml(s)}</button>`;
+  const tags = getResearchTags();
+  root.innerHTML = tags.map((t) => {
+    const pressed = t === activeTag ? "true" : "false";
+    return `<button class="filter" type="button" aria-pressed="${pressed}" data-filter="${escapeHtml(t)}">${escapeHtml(t)}</button>`;
   }).join("");
 }
 
-function paperMatches(p, { status, query }) {
-  const statusOk = status === "All" ? true : normalizeStatus(p.status) === status;
+function paperMatches(p, { tag, query }) {
+  const tagOk = tag === "All" ? true : (p.tags || []).includes(tag);
   const q = String(query || "").trim().toLowerCase();
-  if (!q) return statusOk;
+  if (!q) return tagOk;
 
   const hay = [
     p.title, p.venue, normalizeStatus(p.status), String(p.year),
     ...(p.tags || []), ...(p.authors || [])
   ].join(" ").toLowerCase();
 
-  return statusOk && hay.includes(q);
+  return tagOk && hay.includes(q);
 }
 
 function makeCitationLine(p) {
@@ -454,12 +449,12 @@ function renderPaperCard(p) {
   `;
 }
 
-function renderResearchList(activeStatus, query) {
+function renderResearchList(activeTag, query) {
   const root = $("#researchList");
   if (!root) return;
 
   const filtered = RESEARCH
-    .filter((p) => paperMatches(p, { status: activeStatus, query }))
+    .filter((p) => paperMatches(p, { tag: activeTag, query }))
     .sort((a, b) => {
       if (Boolean(b.featured) !== Boolean(a.featured)) return b.featured ? 1 : -1;
       return (b.year || 0) - (a.year || 0);
@@ -467,28 +462,28 @@ function renderResearchList(activeStatus, query) {
 
   root.innerHTML = filtered.length
     ? filtered.map(renderPaperCard).join("")
-    : `<div class="paper"><p class="muted" style="margin:0;">No papers match your filter. Try a different status or search term.</p></div>`;
+    : `<div class="paper"><p class="muted" style="margin:0;">No papers match your filter. Try a different tag or search term.</p></div>`;
 }
 
 function setupResearch() {
-  let activeStatus = "All";
+  let activeTag = "All";
   let query = "";
 
-  renderResearchFilters(activeStatus);
-  renderResearchList(activeStatus, query);
+  renderResearchFilters(activeTag);
+  renderResearchList(activeTag, query);
 
   $("#researchFilters")?.addEventListener("click", (e) => {
     const btn = e.target instanceof Element ? e.target.closest("[data-filter]") : null;
     if (!btn) return;
-    activeStatus = btn.getAttribute("data-filter") || "All";
-    renderResearchFilters(activeStatus);
-    renderResearchList(activeStatus, query);
+    activeTag = btn.getAttribute("data-filter") || "All";
+    renderResearchFilters(activeTag);
+    renderResearchList(activeTag, query);
     setupReveal();
   });
 
   $("#researchSearch")?.addEventListener("input", (e) => {
     query = e.target.value || "";
-    renderResearchList(activeStatus, query);
+    renderResearchList(activeTag, query);
     setupReveal();
   });
 
@@ -577,7 +572,8 @@ function renderProjectList(activeCategory, query) {
               ${badge}
             </div>
 
-            <div>
+            <div style="display: grid; gap: 8px;">
+              ${p.course ? `<div class="project-course" aria-label="Course"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> ${escapeHtml(p.course)}</div>` : ""}
               <h3 class="project-title">${escapeHtml(p.title)}</h3>
               <p class="project-desc">${escapeHtml(p.description)}</p>
             </div>

@@ -1073,6 +1073,19 @@ p {
   backdrop-filter: blur(8px);
 }
 
+.project-course {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tint);
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
 .project-title {
   font-size: 16px;
   margin: 0;
