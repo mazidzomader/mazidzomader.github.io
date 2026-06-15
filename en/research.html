@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Portfolio Website" />
+    <link rel="canonical" href="https://shahriarabid191.github.io/en/research.html" />
+    <meta name="keywords" content="Portfolio, Resume, Web Developer">
+    <meta name="author" content="Abdullah Al Mazid Zomader" />
+
+    <title>Abdullah Al Mazid Zomader</title>
+
+    <link rel="icon" type="image/x-icon" href="../images/Logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+   
+    
+    
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
+</head>
+
+<body class="en">
+    <header class="top-header" role="banner">
+        <img id="logo" src="../images/Logo.jpg" alt="Logo">
+    </header>
+
+    <main class="content">
+
+        <h1 class="pgTitle">Research</h1>
+
+        <article>
+            <p class="mb-20" style="color: var(--muted);">Advancing foundational knowledge in AI through systematic study and experimentation.</p>
+
+            <div class="grid-container">
+                <section class="container">
+                    <h2>Machine Learning</h2>
+                </section>
+                
+                <section class="container">
+                    <h2>Neural Networks</h2>
+                </section>
+
+                <section class="container">
+                    <h2>Natural Language Processing</h2>
+                </section>
+
+                <section class="container">
+                    <h2>LLMs & Generative AI</h2>
+                </section>
+
+                <section class="container">
+                    <h2>Multimodal & Vision</h2>
+                </section>
+            </div>
+
+            <section class="container" style="margin-top: 20px;">
+                <h2>Publications & Projects</h2>
+                
+                <div class="research-controls mt-20" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <input type="text" id="researchSearch" placeholder="Search by title, keyword, or venue..." style="flex: 1; min-width: 200px; padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: var(--input-bg); color: var(--text);">
+                    <select id="researchFilter" style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: var(--input-bg); color: var(--text); cursor: pointer;">
+                        <option value="all">All Categories</option>
+                        <option value="coursework">Coursework</option>
+                        <option value="published">Published</option>
+                        <option value="preprint">Preprint</option>
+                    </select>
+                </div>
+
+                <div class="research-list">
+                    <div class="research-item mt-20" data-category="coursework">
+                        <h3><a href="https://drive.google.com/file/d/1L1hhtKRZwpsVM-T7WIkDwIAUcZvxw2aF/view?usp=sharing" target="_blank" rel="noreferrer" class="link bold">CARBON-MED: Comparative Analysis of Resource-efficient Benchmarking and Optimization of Neural and Machine learning models under Emission constraints for Diagnostical datasets</a></h3>
+                        <p class="mt-10"><strong>Authors:</strong> Abdullah Al Mazid Zomader, Avisheek Pal Joy, MD Nur Uddin Howlader Ashiq</p>
+                        <p class="mt-10"><strong>Venue:</strong> CSE427: Machine Learning (2026) <span style="color: var(--muted); font-size: 0.9em; margin-left: 10px;">| Coursework</span></p>
+                        <p class="mt-10">A comparative study benchmarking six machine learning and neural network models across six diagnostic datasets to optimize accuracy and carbon emissions utilizing CodeCarbon.</p>
+                        <div class="socials mt-10">
+                            <a class="link" href="https://github.com/mazidzomader/CSE427-Project-BRACU" target="_blank" rel="noreferrer">Code</a>
+                            <a class="link" href="https://drive.google.com/file/d/1L1hhtKRZwpsVM-T7WIkDwIAUcZvxw2aF/view?usp=sharing" target="_blank" rel="noreferrer">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        &copy; <script>document.write(new Date().getFullYear())</script> Abdullah Al Mazid Zomader. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
+
+

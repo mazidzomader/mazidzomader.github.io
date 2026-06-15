@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Portfolio Website" />
+    <link rel="canonical" href="https://shahriarabid191.github.io/en/contact.html" />
+    <meta name="keywords" content="Portfolio, Resume, Web Developer">
+    <meta name="author" content="Abdullah Al Mazid Zomader" />
+
+    <title>Abdullah Al Mazid Zomader</title>
+
+    <link rel="icon" type="image/x-icon" href="../images/Logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+   
+    
+    
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
+</head>
+
+<body class="en">
+    <header class="top-header" role="banner">
+        <img id="logo" src="../images/Logo.jpg" alt="Logo">
+    </header>
+
+    <main class="content" style="padding-bottom: 120px;">
+
+        <h1 class="pgTitle">Contact</h1>
+
+        <section class="container" id="contact">
+            <h2>Send a Message</h2>
+            <p class="muted mt-5">Email me for collaboration, internships, research opportunities, or feedback.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" id="form" name="contact-form" novalidate class="mt-20">
+                <input type="hidden" name="access_key" value="1c92272d-4b39-4bab-828f-a2dd3d727b95" />
+                <input type="hidden" name="subject" value="New email for you from your personal website" />
+                <input type="hidden" name="from_name" value="Portfolio Website" />
+
+                <input class="input-minimal" id="name" name="name" type="text" placeholder="Your Name" autocomplete="name" required />
+                <input class="input-minimal" id="email" name="email" type="email" placeholder="Your Email" autocomplete="email" required />
+                <textarea class="input-minimal" id="message" name="message" rows="5" placeholder="Your Message" required style="resize: vertical;"></textarea>
+                
+                <button type="submit" id="submitBtn">Send message</button>
+                <div id="formStatus" class="mt-10 bold" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <section class="container mt-20">
+            <h2>Address & Location</h2>
+            <p class="mt-10">
+                Abdullah Al Mazid Zomader<br />
+                BRAC University<br />
+                Kha 224, Bir Uttam Rafiqul Islam Ave<br />
+                Dhaka, Bangladesh • 1212
+            </p>
+            <div class="mt-20" style="border-radius: 15px; overflow: hidden; border: 1px solid var(--border);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.2753880436926!2d90.41994937979644!3d23.773205923617734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7715a40c603%3A0xec01cd75f33139f5!2sBRAC%20University!5e0!3m2!1sen!2sbd!4v1769618813360!5m2!1sen!2sbd" width="100%" height="300" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="socials mt-20">
+            <a href="https://github.com/mazidzomader" class="link" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/abdullah-al-mazid-zomader/" class="link" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1fDNzbJQZVZAIjp-kpCPCDbw_G-Gh_mZn/view" class="link" target="_blank" rel="noreferrer">Resume PDF</a>
+            <a href="mailto:contact.mazidzomader@gmail.com" class="link">Email</a>
+            <a href="https://calendar.google.com/calendar/r/week?cid=contact.mazidzomader@gmail.com" class="link" target="_blank" rel="noreferrer">Calendar</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        &copy;<script>document.write(new Date().getFullYear())</script> Abdullah Al Mazid Zomader. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
+

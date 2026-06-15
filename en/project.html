@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Portfolio Website" />
+    <link rel="canonical" href="https://shahriarabid191.github.io/en/project.html" />
+    <meta name="keywords" content="Portfolio, Resume, Web Developer">
+    <meta name="author" content="Abdullah Al Mazid Zomader" />
+
+    <title>Abdullah Al Mazid Zomader</title>
+
+    <link rel="icon" type="image/x-icon" href="../images/Logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+   
+    
+    
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
+</head>
+
+<body class="en">
+    <header class="top-header" role="banner">
+        <img id="logo" src="../images/Logo.jpg" alt="Logo">
+    </header>
+
+    <main class="content">
+
+        <h1 class="pgTitle">Project</h1>
+
+        <article>
+            <section class="container" style="background: transparent; border: none; padding: 0;">
+                <p class="mb-20" style="color: var(--muted);">A showcase of software developments, machine learning models, and engineering accomplishments.</p>
+                
+                <div class="project-controls mt-20" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <input type="text" id="projectSearch" placeholder="Search projects by title, tech stack, or keyword..." style="flex: 1; min-width: 200px; padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: var(--input-bg); color: var(--text);">
+                    <select id="projectFilter" style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: var(--input-bg); color: var(--text); cursor: pointer;">
+                        <option value="all">All Categories</option>
+                        <option value="ai">AI</option>
+                        <option value="computer-networks">Computer Networks</option>
+                        <option value="database">Database</option>
+                        <option value="machine-learning">Machine Learning</option>
+                        <option value="natural-language-processing">Natural Language Processing</option>
+                        <option value="neural-network">Neural Network</option>
+                    </select>
+                </div>
+            </section>
+
+            <div class="project-list">
+                <!-- Project 1 -->
+                <section class="project-item container mt-20" data-category="database">
+                    <h2><a href="https://github.com/mazidzomader/CSE370-Project-CareerHigh" target="_blank" rel="noreferrer" class="link bold">CareerHigh</a></h2>
+                    <p class="mt-10" style="color: var(--muted); font-size: 0.9em;"><strong>Course:</strong> CSE370: Database Management</p>
+                    <p class="mt-10">Minimalist single-page portfolio with accessibility-first components, data-driven research section, and a screenshot showcase modal.</p>
+                    
+                    <div class="mt-10">
+                        <span class="bold" style="font-size: 0.9em;">Tech Stack:</span>
+                        <div class="mt-10" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">HTML</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">CSS</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">JavaScript</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">PHP</span>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery mt-20">
+                        <img src="/images/Project1/Homepage.png" alt="Portfolio — hero section" title="Homepage">
+                        <img src="/images/Project1/Features.png" alt="Portfolio — research section" title="Features">
+                        <img src="/images/Project1/Login.png" alt="Portfolio — projects section" title="Login">
+                        <img src="/images/Project1/Signup.png" alt="Portfolio — projects section" title="Signup">
+                        <img src="/images/Project1/Dashboard.png" alt="Portfolio — projects section" title="Dashboard">
+                        <img src="/images/Project1/Roadmap.png" alt="Portfolio — projects section" title="Roadmap">
+                        <img src="/images/Project1/Activities.png" alt="Portfolio — projects section" title="Activities">
+                        <img src="/images/Project1/Document.png" alt="Portfolio — projects section" title="Document">
+                        <img src="/images/Project1/Exam.png" alt="Portfolio — projects section" title="Exam">
+                        <img src="/images/Project1/Research Ideas.png" alt="Portfolio — projects section" title="Research Ideas">
+                    </div>
+                    
+                    <div class="socials mt-20">
+                        <a class="link" href="https://github.com/mazidzomader/CSE370-Project-CareerHigh" target="_blank" rel="noreferrer">Source Code</a>
+                    </div>
+                </section>
+
+                <!-- Project 2 -->
+                <section class="project-item container mt-20" data-category="computer-networks">
+                    <h2><a href="https://github.com/mazidzomader/CSE421-Project-BRACU_Campus_Network_Design" target="_blank" rel="noreferrer" class="link bold">BRACU Campus Network Design</a></h2>
+                    <p class="mt-10" style="color: var(--muted); font-size: 0.9em;"><strong>Course:</strong> CSE421: Computer Networks</p>
+                    <p class="mt-10">This project designs and implements a secure, scalable campus network for BRAC University using Cisco Packet Tracer, integrating VLSM, routing, and centralized enterprise services.</p>
+                    
+                    <div class="mt-10">
+                        <span class="bold" style="font-size: 0.9em;">Tech Stack:</span>
+                        <div class="mt-10" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Cisco Packet Tracker</span>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery mt-20">
+                        <img src="/images/Project2/421_Project_Diagram.png" alt="Protocol Diagram" title="Protocol Diagram">
+                    </div>
+                    
+                    <div class="socials mt-20">
+                        <a class="link" href="https://github.com/mazidzomader/CSE421-Project-BRACU_Campus_Network_Design" target="_blank" rel="noreferrer">Source Code</a>
+                    </div>
+                </section>
+
+                <!-- Project 3 -->
+                <section class="project-item container mt-20" data-category="ai,machine-learning,neural-network">
+                    <h2><a href="https://github.com/mazidzomader/CSE422-Project-Flat_Price_Prediction" target="_blank" rel="noreferrer" class="link bold">Flat Pricing Analysis</a></h2>
+                    <p class="mt-10" style="color: var(--muted); font-size: 0.9em;"><strong>Course:</strong> CSE422: Artificial Intelligence</p>
+                    <p class="mt-10">This project analyzes and classifies apartment price ranges using machine learning techniques to predict housing categories based on key features.</p>
+                    
+                    <div class="mt-10">
+                        <span class="bold" style="font-size: 0.9em;">Tech Stack:</span>
+                        <div class="mt-10" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Python</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Numpy</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Pandas</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Scikit-Learn</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Seaborn</span>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery mt-20">
+                        <img src="/images/Project3/422.png" alt="ProjectSummary" title="Model Scores">
+                        <img src="/images/Project3/confusion_matrix.png" alt="Confusion" title="Confusion">
+                        <img src="/images/Project3/Accuracy.png" alt="Accuracy" title="Accuracy">
+                        <img src="/images/Project3/Precision.png" alt="Precision" title="Precision">
+                        <img src="/images/Project3/Recall.png" alt="Recall" title="Recall">
+                        <img src="/images/Project3/AUC.png" alt="AUC" title="AUC">
+                    </div>
+                    
+                    <div class="socials mt-20">
+                        <a class="link" href="https://github.com/mazidzomader/CSE422-Project-Flat_Price_Prediction" target="_blank" rel="noreferrer">Source Code</a>
+                    </div>
+                </section>
+
+                <!-- Project 4 -->
+                <section class="project-item container mt-20" data-category="machine-learning,neural-network,natural-language-processing">
+                    <h2><a href="https://github.com/mazidzomader/CSE440-PROJECT-BRACU" target="_blank" rel="noreferrer" class="link bold">Multi-Class Text Classification</a></h2>
+                    <p class="mt-10" style="color: var(--muted); font-size: 0.9em;"><strong>Course:</strong> CSE440: Natural Language Processing</p>
+                    <p class="mt-10">A comprehensive study on multi-class text classification using 107k+ news headlines. Explores the impact of various preprocessing pipelines, word embeddings, and neural architectures on accuracy.</p>
+                    
+                    <div class="mt-10">
+                        <span class="bold" style="font-size: 0.9em;">Tech Stack:</span>
+                        <div class="mt-10" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Python</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">TensorFlow</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Keras</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Scikit-Learn</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">NLTK</span>
+                            <span style="font-size: 0.8em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 12px;">Word2Vec</span>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery mt-20">
+                        <img src="/images/Project4/Results.png" alt="Model Comparison Results Table" title="Model Comparison Results">
+                        <img src="/images/Project4/Wordcloud.png" alt="Word Cloud of Frequent Terms" title="Frequent Terms Word Cloud">
+                        <img src="/images/Project4/barplot.png" alt="Class Distribution Bar Plot" title="Class Distribution">
+                        <img src="/images/Project4/Best_CM.png" alt="Confusion Matrix of the Best Performing Model" title="Best Model Confusion Matrix">
+                        <img src="/images/Project4/Worst_CM.png" alt="Confusion Matrix of the Worst Performing Model" title="Worst Model Confusion Matrix">
+                    </div>
+                    
+                    <div class="socials mt-20">
+                        <a class="link" href="https://github.com/mazidzomader/CSE440-PROJECT-BRACU" target="_blank" rel="noreferrer">Source Code</a>
+                    </div>
+                </section>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        &copy; <script>document.write(new Date().getFullYear())</script> Abdullah Al Mazid Zomader. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
+
+
