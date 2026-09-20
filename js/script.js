@@ -34,7 +34,39 @@ const icons = {
 document.addEventListener('DOMContentLoaded', () => {
     initDarkMode();
     loadNavBar();
+    updateIntroStats();
 });
+
+// ── Dynamic intro stats (project & research counts) ───────
+async function updateIntroStats() {
+    const projectCountEl = document.getElementById('projectCount');
+    const researchCountEl = document.getElementById('researchCount');
+
+    // Only run on the index page
+    if (!projectCountEl && !researchCountEl) return;
+
+    async function countItems(url, selector) {
+        try {
+            const res = await fetch(url);
+            const text = await res.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            return doc.querySelectorAll(selector).length;
+        } catch {
+            return null;
+        }
+    }
+
+    if (projectCountEl) {
+        const count = await countItems('/en/project.html', '.project-item');
+        projectCountEl.textContent = count !== null ? count + '+' : '4+';
+    }
+
+    if (researchCountEl) {
+        const count = await countItems('/en/research.html', '.research-item');
+        researchCountEl.textContent = count !== null ? count + '+' : '1+';
+    }
+}
 
 // ── Dark mode ────────────────────────────────────────────
 const MOON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
